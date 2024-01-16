@@ -13,7 +13,7 @@ When('User check Hotel name', async()=>{
 When('User continue with hotel', async()=>{
     await bp.Continue();
 })
-When('And User enter first name', async()=>{
+When('User enter first name', async()=>{
     await bp.FirstName();
 })
 
