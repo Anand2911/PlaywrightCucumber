@@ -1,18 +1,11 @@
 const {When, Then} = require('@cucumber/cucumber');
 const {LoginPage} = require('../page/LoginPage');
 const { SearchHotelPage } = require('../page/SearchHotelPage');
+const { SelectHotelPage } = require('../page/SelectHotelPage');
 const { BookAHotelPage } = require('../page/BookAHotelPage');
 
 let bp = new BookAHotelPage();
 
-When('User check Hotel name', async()=>{
-    let ap = await bp.SelectHotel();
-    console.log(ap);
-})
-
-When('User continue with hotel', async()=>{
-    await bp.Continue();
-})
 When('User enter first name', async()=>{
     await bp.FirstName();
 })
@@ -30,7 +23,7 @@ When('User enter Credit Card No', async()=>{
 })
 
 When('User Credit Card Type', async()=>{
-    await sp.CreditCardType();
+    await bp.CreditCardType();
 })
 
 When('User select Expiry Date', async()=>{

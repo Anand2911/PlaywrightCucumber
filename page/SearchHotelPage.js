@@ -13,10 +13,11 @@ class SearchHotelPage{
     }
 
     async clickOnSubmit(){
-        await global.page.locator('//input[@name="Submit"]').click();
-    }
 
-    async verifyTitle(){
+        await global.page.locator('//input[@name="Submit"]').click();
+   }
+
+      async verifyTitle(){
         await expect (global.page).toHaveTitle('Adactin.com - Select Hotel');
     }
 

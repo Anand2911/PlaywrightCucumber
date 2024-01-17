@@ -1,15 +1,8 @@
 const {test, expect} = require("@playwright/test");
 
 class BookAHotelPage{
-    async SelectHotel(){
-            await global.page.locator('//input[@id="radiobutton_0"]').check();
-    }
-
-    async Continue(){
-        await global.page.locator('//input[@id="continue"]').click();
-    }
-
-      async FirstName(){
+   
+    async FirstName(){
         await global.page.locator('//input[@id="first_name"]').fill('Anand');
     }
 
@@ -39,6 +32,7 @@ class BookAHotelPage{
 
     async BookNow(){
         await global.page.locator('//input[@id="book_now"]').click;
+        await page.waitForTimeout(3000);
     }
     async verifyTitle(){
         await expect (global.page).toHaveTitle('Adactin.com - Book A Hotel');
