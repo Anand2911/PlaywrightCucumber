@@ -21,4 +21,7 @@ Scenario: Login to hotel App
  And User select Cvv
  And User Click on Book Now
  And User verify title two
-
+ And User click on Booked Itinerary	
+ And User click on Order Id	
+ And User want to Cancel Selected
+ And User click on logout
