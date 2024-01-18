@@ -4,14 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx cucumber-js --require ./steps/*.js --tags @Login --publish"
+    "generate-report": "allure generate allure-results -o allure-report --clean && npx allure open",
+    "test": "npx cucumber-js --require ./steps/*.js --tags @Login"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.40.1",
-    "@types/node": "^20.11.0"
+    "@types/node": "^20.11.0",
+    "allure-commandline": "^2.26.0",
+    "allure-playwright": "^2.11.0"
   },
   "dependencies": {
     "@cucumber/cucumber": "^10.2.1",

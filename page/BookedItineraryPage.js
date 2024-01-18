@@ -2,8 +2,8 @@ const {test, expect} = require("@playwright/test");
 
 class BookedItineraryPage {
     async BookedItinerary() {
-        await page.waitForTimeout(3000);
-        await global.page.locator('//a[text()="Booked Itinerary"]').click();
+           await global.page.locator('//a[text()="Booked Itinerary"]').click();
+           await page.waitForTimeout(3000);
                
     }
     async OrderId() {
